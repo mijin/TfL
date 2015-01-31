@@ -16,10 +16,10 @@
 		48BBEE0A1A7CE47E00D01769 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48BBEE091A7CE47E00D01769 /* CoreLocation.framework */; };
 		48BBEE0C1A7CE48800D01769 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48BBEE0B1A7CE48800D01769 /* MapKit.framework */; };
 		48BBEE0E1A7CE53E00D01769 /* Global.m in Sources */ = {isa = PBXBuildFile; fileRef = 48BBEE0D1A7CE53E00D01769 /* Global.m */; };
-		48BBEE161A7CE5F700D01769 /* Requests.m in Sources */ = {isa = PBXBuildFile; fileRef = 48BBEE151A7CE5F700D01769 /* Requests.m */; };
 		48BBEE1A1A7CE67C00D01769 /* TramAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 48BBEE191A7CE67C00D01769 /* TramAnnotation.m */; };
 		48BBEE1D1A7CE6C600D01769 /* BusAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 48BBEE1C1A7CE6C600D01769 /* BusAnnotation.m */; };
 		48BBEE201A7CE70000D01769 /* TubeAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 48BBEE1F1A7CE70000D01769 /* TubeAnnotation.m */; };
+		48BBEE231A7CFAD000D01769 /* Requests.m in Sources */ = {isa = PBXBuildFile; fileRef = 48BBEE221A7CFAD000D01769 /* Requests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,14 +49,14 @@
 		48BBEE0B1A7CE48800D01769 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		48BBEE0D1A7CE53E00D01769 /* Global.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Global.m; sourceTree = "<group>"; };
 		48BBEE0F1A7CE57A00D01769 /* Global.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Global.h; sourceTree = "<group>"; };
-		48BBEE141A7CE5F700D01769 /* Requests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Requests.h; path = ../Requests.h; sourceTree = "<group>"; };
-		48BBEE151A7CE5F700D01769 /* Requests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Requests.m; path = ../Requests.m; sourceTree = "<group>"; };
 		48BBEE181A7CE67C00D01769 /* TramAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TramAnnotation.h; sourceTree = "<group>"; };
 		48BBEE191A7CE67C00D01769 /* TramAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TramAnnotation.m; sourceTree = "<group>"; };
 		48BBEE1B1A7CE6C600D01769 /* BusAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusAnnotation.h; sourceTree = "<group>"; };
 		48BBEE1C1A7CE6C600D01769 /* BusAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusAnnotation.m; sourceTree = "<group>"; };
 		48BBEE1E1A7CE70000D01769 /* TubeAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TubeAnnotation.h; sourceTree = "<group>"; };
 		48BBEE1F1A7CE70000D01769 /* TubeAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TubeAnnotation.m; sourceTree = "<group>"; };
+		48BBEE211A7CFAD000D01769 /* Requests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Requests.h; sourceTree = "<group>"; };
+		48BBEE221A7CFAD000D01769 /* Requests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Requests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +102,7 @@
 		48BBEDE01A7CE3DD00D01769 /* TfL */ = {
 			isa = PBXGroup;
 			children = (
+				48BBEE241A7CFADA00D01769 /* API */,
 				48BBEE171A7CE65400D01769 /* Annotations */,
 				48BBEE101A7CE5A300D01769 /* API */,
 				48BBEE081A7CE44700D01769 /* Controller */,
@@ -162,8 +163,6 @@
 		48BBEE101A7CE5A300D01769 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				48BBEE141A7CE5F700D01769 /* Requests.h */,
-				48BBEE151A7CE5F700D01769 /* Requests.m */,
 			);
 			name = API;
 			sourceTree = "<group>";
@@ -179,6 +178,15 @@
 				48BBEE1F1A7CE70000D01769 /* TubeAnnotation.m */,
 			);
 			name = Annotations;
+			sourceTree = "<group>";
+		};
+		48BBEE241A7CFADA00D01769 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				48BBEE211A7CFAD000D01769 /* Requests.h */,
+				48BBEE221A7CFAD000D01769 /* Requests.m */,
+			);
+			name = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,11 +289,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				48BBEE1A1A7CE67C00D01769 /* TramAnnotation.m in Sources */,
+				48BBEE231A7CFAD000D01769 /* Requests.m in Sources */,
 				48BBEE1D1A7CE6C600D01769 /* BusAnnotation.m in Sources */,
 				48BBEDEA1A7CE3DD00D01769 /* ViewController.m in Sources */,
 				48BBEDE71A7CE3DD00D01769 /* AppDelegate.m in Sources */,
 				48BBEE201A7CE70000D01769 /* TubeAnnotation.m in Sources */,
-				48BBEE161A7CE5F700D01769 /* Requests.m in Sources */,
 				48BBEDE41A7CE3DD00D01769 /* main.m in Sources */,
 				48BBEE0E1A7CE53E00D01769 /* Global.m in Sources */,
 			);
@@ -476,6 +484,7 @@
 				48BBEE031A7CE3DD00D01769 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		48BBEE041A7CE3DD00D01769 /* Build configuration list for PBXNativeTarget "TfLTests" */ = {
 			isa = XCConfigurationList;
@@ -484,6 +493,7 @@
 				48BBEE061A7CE3DD00D01769 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
