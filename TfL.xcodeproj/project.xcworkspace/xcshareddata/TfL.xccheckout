@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>6AF9D76C-8524-4312-AEB4-C4200D7C49CB</string>
+	<key>IDESourceControlProjectName</key>
+	<string>TfL</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>5E3672792C7172D4D72A612E296D0DB50C2057C0</key>
+		<string>https://github.com/mijin/TfL.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>TfL.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>5E3672792C7172D4D72A612E296D0DB50C2057C0</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/mijin/TfL.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>5E3672792C7172D4D72A612E296D0DB50C2057C0</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>5E3672792C7172D4D72A612E296D0DB50C2057C0</string>
+			<key>IDESourceControlWCCName</key>
+			<string>TfL</string>
+		</dict>
+	</array>
+</dict>
+</plist>
