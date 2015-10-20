@@ -41,5 +41,7 @@
 	</array>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>This will be used to obtain or track your location.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>This will be used to obtain or track your location.</string>
 </dict>
 </plist>

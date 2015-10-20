@@ -23,36 +23,20 @@ dispatch_queue_t queue;
 
 @implementation ViewController
 
--(void)startLocationManager
-{
-    self.locationManager = [[CLLocationManager alloc] init];
-    self.locationManager.delegate = self;
-    self.locationManager.distanceFilter = kCLDistanceFilterNone;
-    self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
-    
-    [self.locationManager startUpdatingLocation];
-    #ifdef __IPHONE_8_0
-        if(IS_OS_8_OR_LATER) {
-            
-            [self.locationManager requestWhenInUseAuthorization];
-            [self.locationManager requestAlwaysAuthorization];
-        }
-    #endif
-    
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
     self.view.backgroundColor = [UIColor whiteColor];
-    queue = dispatch_queue_create("com.test.queue",nil);
+    //queue = dispatch_queue_create("com.test.queue",nil);
     
-    self.mapView = [[MKMapView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
-    [self.view addSubview:self.mapView];
-    self.mapView.delegate =self;
     
     [self startLocationManager];
+    self.mapView = [[MKMapView alloc] initWithFrame:CGRectMake(0, 0,
+                                                               self.view.frame.size.width,
+                                                               self.view.frame.size.height)];
+    [self.view addSubview:self.mapView];
+    self.mapView.delegate = self;
     
     [self.mapView setMapType:MKMapTypeStandard];
     [self.mapView setZoomEnabled:YES];
@@ -73,12 +57,30 @@ dispatch_queue_t queue;
 }
 
 
+-(void)startLocationManager
+{
+    self.locationManager = [[CLLocationManager alloc] init];
+    
+#ifdef __IPHONE_8_0
+    if(IS_OS_8_OR_LATER) {
+        //[self.locationManager requestWhenInUseAuthorization];
+        [self.locationManager requestAlwaysAuthorization];
+    }
+#endif
+    
+    self.locationManager.delegate = self;
+    self.locationManager.distanceFilter = kCLDistanceFilterNone;
+    self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    
+    [self.locationManager startUpdatingLocation];
+
+    
+}
+
 
 - (void)getPublicTransportation
 {
     
-    dispatch_async(queue, ^{
-        
         NSMutableArray* places = [[Requests getPlace:self.latitude lon:self.longitude radius:500 categories:@"stop"] mutableCopy];
         
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -165,7 +167,6 @@ dispatch_queue_t queue;
             
             
         });
-    });
 }
 
 
@@ -254,6 +255,7 @@ dispatch_queue_t queue;
     region.span.longitudeDelta = 0.005f;
     [self.mapView setRegion:region animated:YES];
     
+    
 }
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
@@ -261,7 +263,7 @@ dispatch_queue_t queue;
     self.latitude = newLocation.coordinate.latitude;
     self.longitude = newLocation.coordinate.longitude;
 
-    //NSLog(@"newLocation %@",newLocation);
+    NSLog(@"newLocation %@",newLocation);
     
     
     self.mapView.showsUserLocation = YES;
